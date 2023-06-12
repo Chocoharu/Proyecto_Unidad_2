@@ -34,3 +34,5 @@ Una vez seleccionado se iniciara el viaje haciendo llamado a las funciones previ
 Cada vez que se termina el entrenamiento, se mostrara los datos actualizados de nuestro guardian y se nos preguntara si deseamos ver nuestro historial, esta opcion puede ser elegida o no, depende del usuario.
 Si se consigue un minimo de 60 puntos es posible usar la funcion Alquimist para crear caminos entre las villas a costa de nuestro poder.
 Como mencione anteriormente, este bucle solo se acabara cuando lleguemos a la villa Tesla y nos enfrentemos a Stormheart.
+
+video: https://youtu.be/8Xs8kXhuw7w
