@@ -232,8 +232,12 @@ public:
 						if (trainingGuardian == nullptr) { cout << "Guardián no encontrado. Inténtalo de nuevo." << endl; } 
 						else
 						{
-							if(trainingGuardian==mainMaster) { aprentice->PowerLevel+=2; PointUpdate(Villa,destination, 2); }															//Una vez realizado el entrenamieno se aumentara los puntos correspondientes
-							else { 	aprentice->PowerLevel+=1; PointUpdate(Villa,destination, 1); }
+							if(Dado())
+							{
+								if(trainingGuardian==mainMaster ){ aprentice->PowerLevel+=2; PointUpdate(Villa,destination, 2); }															//Una vez realizado el entrenamieno se aumentara los puntos correspondientes
+								else { 	aprentice->PowerLevel+=1; PointUpdate(Villa,destination, 1); }
+							}
+
 							Historial h1 {destination, trainingGuardian->Name};
 							lista.push_back(h1);				 																														//Y se agregara a una lista como registro de combate
 						}
@@ -330,6 +334,20 @@ private:
 		}
 		return currentguardian;
 	}	
+	bool Dado()
+	{
+		int dado = rand()%6+1;
+		if(dado%2==0)
+		{
+			cout << "Entrenamiento ganado" << endl;
+			return true;
+		}
+		else 
+		{ 
+		cout << "Entrenamiento perdido" << endl;
+			return false;
+		}
+	}
 };
 
 int main(int argc, char** argv) {																										//Inicio del main
